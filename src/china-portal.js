@@ -15,7 +15,7 @@ define(function (require) {
 
     // moment.lang('en-en');
     var module = angular.module('portal', []);
-    module.directive('chinaportal', ChinaPortalDirective);
+    module.directive('chinaPortal', ChinaPortalDirective);
 
     angular.element(document).ready(function () {
         angular.bootstrap(document, ['portal']);
