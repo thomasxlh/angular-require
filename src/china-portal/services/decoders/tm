@@ -1,0 +1,17 @@
+Services called RPC or stream to get data, may using decoders to decode the fields
+
+
+
+1. HTML页面的加载，这会触发加载页面包含的所有JS (包括 AngularJS)
+
+2. AngularJS启动，搜寻所有的指令(directive)
+
+3. 找到ng-app，搜寻其指定的模块(Module)，并将其附加到ng-app所在的组件上。
+
+4. AnguarJS遍历所有的子组件，查找指令和bind命令
+
+5. 每次发现ng-controller或者ng-repeart的时候，它会创建一个作用域(scope)，这个作用域就是组件的上下文。作用域指明了每个DOM组件对函数、变量的访问权。
+
+6. AngularJS然后会添加对变量的监听器，并监控每个变量的当前值。一旦值发生变化，AngularJS会更新其在页面上的显示。
+
+7. AngularJS优化了检查变量的算法，它只会在某些特殊的事件触发时，才会去检查数据的更新，而不是简单地在后台不停地轮询。
